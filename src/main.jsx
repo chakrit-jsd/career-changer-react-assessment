@@ -1,10 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from "react-router-dom";
+import Home from './pages/Home'
+import Error404 from './pages/PageNotFound';
+import Owner from './pages/Owner';
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={} />
+  <Router>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/owner' element={<Owner />} />
+      <Route path='*' element={<Error404 />} />
+    </Routes>
+  </Router>
 )
