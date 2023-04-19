@@ -1,7 +1,5 @@
 import { useState } from "react"
 
-
-
 const AdminSector = ({ employees, handleSetEmpolyees, handleDeleteEmployees }) => {
   const [ name, setName ] = useState('')
   const [ lastname, setLastname ] = useState('')
@@ -28,7 +26,7 @@ const AdminSector = ({ employees, handleSetEmpolyees, handleDeleteEmployees }) =
           <input type="text" placeholder="Name" value={name} onChange={({target}) => setName(target.value)}/>
           <input type="text" placeholder="Lastname" value={lastname} onChange={({target}) => setLastname(target.value)} />
           <input type="text" placeholder="Position" value={position} onChange={({target}) => setPosition(target.value)} />
-          <button onClick={() => setData()} >Save</button>
+          <button onClick={() => setData()}>Save</button>
         </div>
       </div>
       <table className="border-dark table-bordered">
